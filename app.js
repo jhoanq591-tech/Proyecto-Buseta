@@ -6,7 +6,7 @@ const destinations = [
     region: "santander",
     price: 150000,
     duration: "8 Horas",
-    img: "chicamocha.jpg",
+    img: "./chicamocha.jpg",
     desc: "Recorrido completo con paradas en miradores.",
   },
   {
@@ -15,7 +15,7 @@ const destinations = [
     region: "norte-santander",
     price: 180000,
     duration: "10 Horas",
-    img: "estoraques.jpg",
+    img: "./estoraques.jpg",
     desc: "Aventura mística en formaciones rocosas únicas.",
   },
   {
@@ -24,7 +24,7 @@ const destinations = [
     region: "costa",
     price: 250000,
     duration: "2 Días",
-    img: "tayrona.jpg",
+    img: "./tayrona.jpg",
     desc: "Carretera costera y acampada cerca al mar.",
   },
   {
@@ -33,7 +33,7 @@ const destinations = [
     region: "santander",
     price: 120000,
     duration: "6 Horas",
-    img: "barichara.jpg",
+    img: "./barichara.jpg",
     desc: "Visita al pueblito más lindo de Colombia.",
   },
 ];
