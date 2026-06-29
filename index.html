@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo 3D | Tu Próxima Aventura</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+</head>
+
+<body>
+
+    <button class="cart-toggle" id="cartToggle">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+    </button>
+
+    <aside class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h2>Tu Viaje</h2>
+            <button id="closeCart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+        </div>
+        <div class="cart-footer">
+            <h3>Total: $<span id="cartTotal">0</span></h3>
+            <form id="checkoutForm" class="checkout-form">
+                <input type="text" id="clientName" placeholder="Tu Nombre Completo" required>
+                <input type="text" id="clientDates" placeholder="Fechas estimadas" required>
+                <button type="submit" class="btn-primary">Reservar por WhatsApp</button>
+            </form>
+        </div>
+    </aside>
+
+    <main id="screen1" class="screen active">
+        <section class="hero">
+            <div class="hero-background"></div>
+
+            <model-viewer src="/Jac.glb" auto-rotate camera-controls disable-zoom interaction-prompt="none"
+                environment-image="neutral" shadow-intensity="1" class="modelo-3d">
+            </model-viewer>
+
+            <div class="hero-content">
+                <h1>Descubre Colombia sobre ruedas</h1>
+                <p>La mejor experiencia de turismo automotor.</p>
+                <button class="btn-primary" id="btnExplorar">Ver Destinos <i class="fas fa-arrow-down"></i></button>
+            </div>
+        </section>
+
+        <section class="info-sections">
+            <div class="scroll-reveal card-info">
+                <i class="fas fa-users icon-large"></i>
+                <h2>Nosotros</h2>
+                <p>Somos apasionados por mostrarte los mejores paisajes con total libertad.</p>
+            </div>
+            <div class="scroll-reveal card-info">
+                <i class="fas fa-shield-alt icon-large"></i>
+                <h2>Fiabilidad y Aseguranza</h2>
+                <p>Vehículos monitoreados y seguros de viaje cobertura total incluidos.</p>
+            </div>
+            <div class="scroll-reveal card-info">
+                <i class="fas fa-star icon-large"></i>
+                <h2>Empresa de Confianza</h2>
+                <p>Cientos de viajeros respaldan nuestra calidad de servicio.</p>
+            </div>
+        </section>
+
+        <div class="center-btn">
+            <button class="btn-primary large" id="btnGoToScreen2">Ir a los Paquetes <i
+                    class="fas fa-arrow-right"></i></button>
+        </div>
+    </main>
+
+    <main id="screen2" class="screen hidden">
+        <header class="screen2-header">
+            <button class="btn-back" id="btnBack"><i class="fas fa-arrow-left"></i> Volver</button>
+            <h2>Nuestros Destinos</h2>
+        </header>
+
+        <div class="filters">
+            <button class="filter-btn active" data-region="todas">Todas</button>
+            <button class="filter-btn" data-region="santander">Santander</button>
+            <button class="filter-btn" data-region="norte-santander">Norte de Santander</button>
+            <button class="filter-btn" data-region="costa">Costa Caribe</button>
+        </div>
+
+        <section class="destinations-grid" id="destinationsGrid">
+        </section>
+
+        <footer>
+            <h3>Conéctate con nosotros</h3>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>© 2026 Tu Emprendimiento de Turismo. Todos los derechos reservados.</p>
+        </footer>
+    </main>
+    <main>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
